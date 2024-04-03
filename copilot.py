@@ -28,6 +28,7 @@ def Exit():
 while(app):
     inp = input()
     try: 
+        
         if inp.lower() == "write a song":
             was()
 
@@ -35,7 +36,7 @@ while(app):
             Echo()
 
         elif inp.lower() == "exit":
-            Exit()
+            break
     
     except:
         print("Sorry, an error occured\n")
