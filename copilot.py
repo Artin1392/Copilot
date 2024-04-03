@@ -38,6 +38,8 @@ while(app):
         elif inp.lower() == "exit":
             break
     
+        else:
+            print("Sorry, an error occured\n")
     except:
-        print("Sorry, an error occured\n")
+        break
 
