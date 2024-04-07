@@ -1,8 +1,9 @@
 # Imports
 
 
-# While key
+# Variables
 app = True
+Commands = ["//-was-//", "//-echo-//", "//-exit-//", "//-help-//"]
 
 # Introduce
 print("Hello! I am Copilot, your friendly AI assistant.")
@@ -25,7 +26,11 @@ def Exit():
     app = False
     return app
     
-
+# Help
+def Help():
+    print(" These are all of our commands")
+    for command in Commands:
+        print("\n" + command)
 
 # While loop
 while(app):
@@ -39,8 +44,12 @@ while(app):
             Echo()
 
         elif inp.lower() == "exit":
+            print("Bye :)")
             break
-    
+        
+        elif inp.lower() == "help":
+            Help()
+
         else:
             print("Sorry, an error occured\n")
     except:
