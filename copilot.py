@@ -21,6 +21,15 @@ def Echo():
     text = input('Just say something:\n')
     print(text)
 
+# Read
+def Read():
+    directory = input('Enter directory:\n')
+    try:
+        file = open(directory, "r")
+        print(file.read())
+    except:
+        print("Error: Invalid directory.")
+
 # Exit
 def Exit():
     app = False
@@ -42,6 +51,9 @@ while(app):
 
         elif inp.lower() == "echo":
             Echo()
+
+        elif inp.lower() == "read":
+            Read()
 
         elif inp.lower() == "exit":
             print("Bye :)")
