@@ -3,7 +3,7 @@
 
 # Variables
 app = True
-Commands = ["was", "echo", "exit", "help"]
+Commands = ["was", "echo", "read", "exit", "help"]
 
 # Introduce
 print("Hello! I am Copilot, your friendly AI assistant.")
