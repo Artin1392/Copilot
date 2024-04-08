@@ -3,7 +3,7 @@
 
 # Variables
 app = True
-Commands = ["//-was-//", "//-echo-//", "//-exit-//", "//-help-//"]
+Commands = ["was", "echo", "exit", "help"]
 
 # Introduce
 print("Hello! I am Copilot, your friendly AI assistant.")
@@ -28,9 +28,9 @@ def Exit():
     
 # Help
 def Help():
-    print(" These are all of our commands")
+    print(" These are all of our commands: ")
     for command in Commands:
-        print("\n" + command)
+        print("\n//-{command}-//")
 
 # While loop
 while(app):
