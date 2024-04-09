@@ -3,7 +3,7 @@
 
 # Variables
 app = True
-Commands = ["was", "echo", "read", "exit", "help"]
+Commands = ["write a song", "echo", "read", "create", "exit", "help"]
 
 # Introduce
 print("Hello! I am Copilot, your friendly AI assistant.")
@@ -30,6 +30,18 @@ def Read():
     except:
         print("Error: Invalid directory.")
 
+# Create
+def Create():
+    print(' Important point: format of your file will be .txt!\n')
+    directory = input('Enter directory:\n')
+    text = input('Enter text:\n')
+    try:
+        file = open( directory + ".txt", "w")
+        file.write(text)
+        print("Successfully created " + file.name)
+    except:
+        print(" An error occured.")
+
 # Exit
 def Exit():
     app = False
@@ -39,7 +51,7 @@ def Exit():
 def Help():
     print(" These are all of our commands: ")
     for command in Commands:
-        print("\n//-{command}-//")
+        print("\n//-" + command + "-//")
 
 # While loop
 while(app):
@@ -55,6 +67,9 @@ while(app):
         elif inp.lower() == "read":
             Read()
 
+        elif inp.lower() == "create":
+            Create()
+
         elif inp.lower() == "exit":
             print("Bye :)")
             break
@@ -66,4 +81,3 @@ while(app):
             print("Sorry, an error occured\n")
     except:
         break
-
